@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int i,m;
-    char mat[N][N]={};
+    int mat[N][N]={};
     mat[1][1]=1;
     printf("\n");
 
@@ -33,20 +33,45 @@ int main()
                     {
                         if(GetAsyncKeyState(VK_UP)!=0)
                         {
+                            int i2=(i-1);
+                            if(mat[i2][m]==0)
+                            {
+                                mat[i][m]=0;
+                                i--;
+                                mat[i2][m]=1;
+                            }
+/*
                         	mat[i][m]=0;
                             mat[--i][m]=1;
+*/
 
                         }
                         if(GetAsyncKeyState(VK_DOWN)!=0)
                         {
-                            mat[i][m]=0;
-                            mat[++i][m]=1;
+                            int i2=(i+1);
+                            if(mat[i2][m]==0)
+                            {
+                                mat[i][m]=0;
+                                i++;
+                                mat[i2][m]=1;
+                            }
+                            //mat[i][m]=0;
+                            //mat[++i][m]=1;
 
                         }
                         if(GetAsyncKeyState(VK_LEFT)!=0)
 					    {
-					        mat[i][m]=0;
-                            mat[i][--m]=1;
+
+                            int m2=(m-1);
+                            if(mat[i][m2]==0)
+                            {
+                                mat[i][m]=0;
+                                m--;
+                                mat[i][m2]=1;
+                            }
+
+					        //mat[i][m]=0;
+                            //mat[i][--m]=1;
 					    }
 					    if(GetAsyncKeyState(VK_RIGHT)!=0)
 					    {
