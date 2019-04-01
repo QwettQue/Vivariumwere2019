@@ -31,16 +31,28 @@ int main()
             {
                     if(mat[i][m]!=0)
                     {
-                        if(GetAsyncKeyState(VK_LBUTTON)!=0)
+                        if(GetAsyncKeyState(VK_UP)!=0)
                         {
-                            mat[i][m]++;
+                        	mat[i][m]=0;
+                            mat[--i][m]=1;
 
                         }
                         if(GetAsyncKeyState(VK_DOWN)!=0)
                         {
-                            mat[i][m]--;
+                            mat[i][m]=0;
+                            mat[++i][m]=1;
 
                         }
+                        if(GetAsyncKeyState(VK_LEFT)!=0)
+					    {
+					        mat[i][m]=0;
+                            mat[i][--m]=1;
+					    }
+					    if(GetAsyncKeyState(VK_RIGHT)!=0)
+					    {
+					        mat[i][m]=0;
+                            mat[i][++m]=1;
+					    }
                     }
             }
         }
