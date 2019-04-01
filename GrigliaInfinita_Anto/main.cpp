@@ -9,13 +9,36 @@ int main()
 
     for(i=0;i<N;i++)
     {
-       m=1;
+       m=0;
 
        mat[m][i]=1;
     }
 
-    while(1)
-    {
+
+
+        for(i=0;i<N;i++)
+        {
+
+            for(m=0;m<N;m++)
+            {
+                if(mat[i][m]==1)
+                {
+                    int i2=(i-1);
+                    if(mat[i2][m]==1)
+                    {
+                        mat[i][m]=0;
+                        i-=1;
+                        mat[i2][m]=1;
+                    }
+
+                }
+            }
+
+        }
+
+
+
+
 
 
         for(i=0;i<N;i++)
@@ -23,26 +46,12 @@ int main()
             for(m=0;m<N;m++)
             {
                 printf(" %d ",mat[i][m]);
-
-            if(mat[i][m]==1)
-            {
-                mat[i][m]=0;
-                mat[i][m+=1]=1;
-            }
             }
             printf("\n");
 
-
         }
 
-        getchar();
-
-    }
-
-
-
-
-
+    getchar();
 
 
 
