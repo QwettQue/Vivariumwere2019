@@ -1,0 +1,2 @@
+N=5
+Programma che mi ha fatto esercitare nello spostare il primo valore di mat[0][0] all ultima cella mat[N][N]
