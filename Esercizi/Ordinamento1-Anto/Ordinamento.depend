@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1554224938 source:c:\users\anto\desktop\vivariumwere\esercizi\ordinamento1-anto\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+

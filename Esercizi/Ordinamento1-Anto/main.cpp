@@ -23,7 +23,7 @@ int main()
         printf("\n");
     }
 
-    int temp,m2;
+    int temp,m2=0;
     for(int i=0;i<N;i++)
     {
         for(int m=0;m<N;m++)
