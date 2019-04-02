@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554222251 source:c:\users\anto\desktop\bubblesort\ordinamento 1\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+
+1554222559 source:c:\users\anto\desktop\ordinamento 2\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+
