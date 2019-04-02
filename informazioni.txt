@@ -1,1 +1,2 @@
-In questa versione dell commit nella cartella GetInput vi sono correzioni di gitper istruzioni in conflitto tra loro. Controllare il main nella cartella per capire
+In questa versione dell commit nella cartella GetInput vi sono correzioni di gitper istruzioni in conflitto tra loro.
+Controllare il main nella cartella per capire
