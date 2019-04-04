@@ -32,23 +32,40 @@ int main()
     {
         for(int m=0;m<N;m++)
         {
-
-            if(m2<N-1)//Ordinamento tipo bubble sort, m2<N-1 perchè deve fermarsi al penultimo ciclo del fot m2
+            for(int x=0;x<N;x++)
             {
 
-                m2=m+1;//Con questo indichiamo una posizione successiva ad m
-                temp=mat[i][m];
-                mat[i][m]=mat[i][m2];
-                mat[i][m2]=temp;
 
-            }
+                if(m2<N-1)//Ordinamento tipo bubble sort, m2<N-1 perchè deve fermarsi al penultimo ciclo del fot m2
+                {
 
-            else// Spostiamo i valori a fine colonna, a inizio colonna
-            {
-                temp=mat[i][m2];
-                mat[i][m2]=mat[i][m2-(N-1)];
-                mat[i][m2-(N-1)]=temp;
-                m2=0;
+                    m2=x+1;//Con questo indichiamo una posizione successiva ad m
+                    temp=mat[i][x];
+                    mat[i][x]=mat[i][m2];
+                    mat[i][m2]=temp;
+
+                }
+
+                else// Spostiamo i valori a fine colonna, a inizio colonna
+                {
+                    temp=mat[i][m2];
+                    mat[i][m2]=mat[i][m2-(N-1)];
+                    mat[i][m2-(N-1)]=temp;
+                    m2=0;
+                }
+                    printf("\n");
+    printf("\n");
+    for(int i=0;i<N;i++)
+    {
+        for(int m=0;m<N;m++)
+        {
+            printf(" %d ",mat[i][m]);
+        }
+        printf("\n");
+    }
+    getchar();
+
+
             }
 
 
@@ -66,6 +83,7 @@ int main()
         }
         printf("\n");
     }
+    getchar();
 
 
 
