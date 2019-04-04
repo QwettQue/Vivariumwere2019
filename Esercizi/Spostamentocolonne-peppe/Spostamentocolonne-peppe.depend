@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1554399936 source:c:\users\giuseppe\desktop\esercizi per github\spostamentocolonne-peppe\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+
