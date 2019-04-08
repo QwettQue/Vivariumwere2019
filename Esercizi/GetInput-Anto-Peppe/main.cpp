@@ -8,7 +8,7 @@ int main()
 {
 
     int i,m;
-<<<<<<< HEAD
+
 	char mat[N][N]={ "######",
 					 "#    #",
 					 "#    #",
@@ -16,24 +16,24 @@ int main()
 					 "#    #",
 					 "######",};
     mat[1][1]='@';
-=======
+/*
     int mat[N][N]={};
-    mat[1][1]=1;
->>>>>>> b8df7fb7e3b77a60bffa878b7fc3be956f3724ef
+    mat[1][1]=1;*/
+
     printf("\n");
 
     while(1)
     {
-<<<<<<< HEAD
+
 	        system("cls");
-	
+
 	        for(i=0;i<N;i++)
 	        {
 	            printf("\t");
 	            for(m=0;m<N;m++)
 	            {
 	                printf(" %c ",mat[i][m]);
-	
+
 	            }
 	            printf("\n");
 	        }
@@ -47,13 +47,13 @@ int main()
 	                        {
 	                        	mat[i][m]=' ';
 	                            mat[--i][m]='@';
-	
+
 	                        }
 	                        if(GetAsyncKeyState(VK_DOWN)!=0)
 	                        {
 	                            mat[i][m]=0;
 	                            mat[++i][m]=1;
-	
+
 	                        }
 	                        if(GetAsyncKeyState(VK_LEFT)!=0)
 						    {
@@ -68,14 +68,14 @@ int main()
 	                    }
 	            }
 	        }
-	
+
 	    Sleep(100);
 	}
 	/*
 	while(1)
 	{
-	
-	
+
+
 	    if(GetAsyncKeyState(VK_UP)!=0)
 	    {
 	        printf("su\n");
@@ -92,9 +92,9 @@ int main()
 	    {
 	        printf("destra\n");
 	    }
-	
+
 	    getchar();
-	
+
 	}
 =======
         system("cls");
@@ -127,7 +127,7 @@ int main()
 /*
                         	mat[i][m]=0;
                             mat[--i][m]=1;
-*/
+*//*
 
                         }
                         if(GetAsyncKeyState(VK_DOWN)!=0)
