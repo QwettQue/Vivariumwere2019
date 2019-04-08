@@ -72,7 +72,7 @@ int main()
                 }
             }
             printf("\n");
-            Sleep(200);
+            //Sleep(200);
 
         }
     }
