@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1554997599 source:c:\users\anto\desktop\c++ oggetti\distruggi navi\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<time.h>
+
