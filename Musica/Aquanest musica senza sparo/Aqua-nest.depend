@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1552861930 source:c:\users\anto\desktop\newaquanest\aqua-nest\main.cpp
+	<iostream>
+	<stdio.h>
+	<time.h>
+
+1555011897 source:c:\users\cristian\desktop\nuova cartella\marcospagnuolo\aquanest\codice sorgente\main.cpp
+	<iostream>
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	<mmsystem.h>
+
+1555704413 source:c:\users\cristian\desktop\nuova cartella\prove\aquanest musica\main.cpp
+	<iostream>
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	<mmsystem.h>
+
+1555704413 source:c:\users\anto\desktop\aquanest musica\main.cpp
+	<iostream>
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	<mmsystem.h>
+
