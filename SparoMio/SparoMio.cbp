@@ -36,7 +36,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="C:/pdcurs34/win32" />
+			<Add directory="C:/pdcurs34" />
 		</Compiler>
+		<Linker>
+			<Add library="C:/pdcurs34/win32/pdcurses.a" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

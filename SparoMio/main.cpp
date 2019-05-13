@@ -1,98 +1,100 @@
 #include <iostream>
 #include <curses.h>
 #include <unistd.h>
+#include <assert.h>
 using namespace std;
-//void add_colpo();
-int scur=0;
+
+
+int spari=0;
+
 
 struct shot
 {
-    int x=0;
-    int y=29;
-    int avanti=1;
+    int x;
+    int y;
+    int avanti;
 };
-
-
 
 int main()
 {
-    struct shot c;
+
     initscr();
     cbreak();
     noecho();
+    nodelay(stdscr, TRUE);
     curs_set(0);
     keypad(stdscr, TRUE);
 
     int in,righe,colonne;
+    extern int spari;
+    int maxspari=5;
     getmaxyx(stdscr, righe, colonne);
 
-    int f;
+
+
+    struct shot* sparo;
+    sparo=(struct shot*) malloc(maxspari * sizeof(struct shot));
+    assert(sparo!=NULL);
+
+
 
     while(1)
     {
 
-
-        for (int i=0; i < scur; ++i)
-        {
-
-            mvprintw(c.y,c.x,"!");
-
-        }
-
-        refresh();
-
-        for(int i=0;i<50;i++)
+        mvprintw(1,14,"Premere spazio per sparare");
+        for(int i=0;i<10000;i++)
         {
             in=getch();
-
+            //usleep(10);
             if(in==' ')
             {
-                scur=1;
-                //mvprintw(righe-1,10,"ciao");
-                f=1;
-                //add_colpo();
+                spari+=1;
+
+                sparo[spari-1].x=0;
+                sparo[spari-1].y=29;
+                sparo[spari-1].avanti=1;
+
+                if(spari==maxspari)
+                {
+                    maxspari=maxspari+maxspari;
+                    sparo=(struct shot*) realloc(sparo, maxspari * sizeof(struct shot));
+                    assert(sparo!=NULL);
+                }
             }
 
         }
 
-        if(f==1)
-        {
-            mvprintw(righe-1,10,"ciao");
 
-            for(int i=0;i<scur;i++)
+            for(int i=0;i<spari;i++)
             {
-                if(c.avanti==1)
-                    c.y-=1;
+                if(sparo[i].avanti==1)
+                    sparo[i].y-=1;
             }
 
 
 
 
-            for (int i=0; i < scur; ++i)
+            clear();
+            mvprintw(1,14,"Premere spazio per sparare");
+            mvprintw(28,30,"spari %d",spari);
+            mvprintw(29,30,"maxspari %d",maxspari);
+            for (int i=0; i < spari; ++i)
             {
 
-                mvprintw(c.y,c.x,"!");
+                mvprintw(sparo[i].y,sparo[i].x,"!");
+
+            }
+
             refresh();
 
-            sleep(2);
-            }
 
 
 
-        }
     }
 
     endwin();
+    free(sparo);
 
     return 0;
-}/*
-void add_colpo()
-{
-    struct shot c;
-    scur++;
-    c.x=0;
-    c.y=29;
-    c.avanti=1;
-    mvprintw(29,10,"ciao");
+}
 
-}*/

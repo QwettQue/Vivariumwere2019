@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1557357489 source:c:\users\anto\desktop\esercizi ncurses\sparomio\main.cpp
+1557785270 source:c:\users\anto\desktop\esercizi ncurses\sparomio\main.cpp
 	<iostream>
 	<curses.h>
 	<unistd.h>
+	<assert.h>
 
 1553965714 c:\pdcurs34\curses.h
 	<stdarg.h>
